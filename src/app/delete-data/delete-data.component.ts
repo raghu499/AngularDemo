@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./delete-data.component.css']
 })
 export class DeleteDataComponent implements OnInit {
-
+  result;
   productID:number;
   //delete ts file
   constructor(private http:HttpClient) { }
@@ -17,5 +17,6 @@ export class DeleteDataComponent implements OnInit {
   deleteData(){
     this.http.delete('http://172.17.20.19:3000/delete/' + this.productID )
     .subscribe(data => { });
+    this.result = 'Deleted Successfully....'
   }
 }
