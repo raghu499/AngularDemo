@@ -30,7 +30,9 @@ export class RegistrationComponent implements OnInit {
   //In this method we will post the data to the target URL with input data.
   onSubmit() {
     //console.log(this.signupForm.value.userData.productid);
-    this.http.post('http://172.17.20.19:3000/postProduct', {
+    //this.http.post('http://172.17.20.19:3000/postProduct',
+    this.http.post('http://172.17.15.68:3000/postProduct',
+     {
       pid: this.signupForm.value.userData.pid,
       pname: this.signupForm.value.userData.pname,
       pcost: this.signupForm.value.userData.pcost,

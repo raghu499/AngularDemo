@@ -23,7 +23,8 @@ export class GetadminComponent implements OnInit {
   }
   //this method will get the records and display them in table 
   search() {
-    this.http.get('http://172.17.20.19:3000/getProducts')
+    //this.http.get('http://172.17.20.19:3000/getProducts')
+    this.http.get('http://172.17.15.68:3000/getProducts')
       .subscribe((response) => {
         this.admindetails = response as string[];
         this.rows = response;

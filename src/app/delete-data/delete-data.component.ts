@@ -15,7 +15,8 @@ export class DeleteDataComponent implements OnInit {
   }
   //This method is for deleting the record
   deleteData(){
-    this.http.delete('http://172.17.20.19:3000/delete/' + this.productID )
+    //this.http.delete('http://172.17.20.19:3000/delete/' + this.productID )
+    this.http.delete('http://172.17.15.68:3000/delete/' + this.productID )
     .subscribe(data => { });
     this.result = 'Deleted Successfully....'
   }
