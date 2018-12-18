@@ -1,0 +1,20 @@
+.wrapper {
+    max-width: 1400px;
+    display: flex;  
+    flex-flow: row;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+  }
+  
+  .header {
+    background: #D8B08C;
+    
+    
+  }
+  
+ 

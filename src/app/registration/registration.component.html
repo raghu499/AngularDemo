@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div formGroupName="userData">
+          <div class="form-group">
+            <label for="productid">Product ID</label>
+            <input type="text" id="productid" formControlName="pid" class="form-control">
+            <span *ngIf="!signupForm.get('userData.pid').valid && signupForm.get('userData.pid').touched" class="help-block">Please
+              enter product ID!</span>
+            <br />
+            <label for="productname">Product Name</label>
+            <input type="text" id="productname" formControlName="pname" class="form-control">
+            <span *ngIf="!signupForm.get('userData.pname').valid && signupForm.get('userData.pname').touched" class="help-block">Please
+              enter product name!</span>
+            <br />
+            <label for="email">Eamil ID</label>
+            <input type="text" id="email" formControlName="email" class="form-control">
+            <span *ngIf="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched" class="help-block">Please
+              enter a valid email!</span>
+            <br />
+            <label for="productcost">Product Cost</label>
+            <input type="text" id="productcost" formControlName="pcost" class="form-control">
+            <span *ngIf="!signupForm.get('userData.pcost').valid && signupForm.get('userData.pcost').touched" class="help-block">Please
+              enter product Cost!</span>
+            <br />
+          </div>
+        </div>
+        <br />
+        <span *ngIf="!signupForm.valid && signupForm.touched" class="help-block">Please enter valid data!</span>
+        <br />
+        <button [disabled]="!signupForm.valid"  class="button" type="submit" mat-button>Submit</button>
+
+      </form>
+      <br />
+      <p>{{result}}</p>
+    </div>
+  </div>
+</div>

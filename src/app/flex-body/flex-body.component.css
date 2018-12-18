@@ -1,0 +1,17 @@
+.call-outs-container {
+    max-width: 1400px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .call-out {
+    padding: 20px;
+    width: 30%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    flex-basis: 30%;
+    background-color: #D8C3A4;
+  }
+  
+  
